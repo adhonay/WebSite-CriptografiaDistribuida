@@ -1,0 +1,102 @@
+﻿body {
+    padding-top: 705px;
+    padding-bottom: 0px;
+    background-color: #eaf0f2;
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: nowrap;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+textarea {
+    max-width: 1000px;
+   
+}
+
+.campo {
+    border: px solid #0000ff;
+    background-color: #000000;
+    width: 100px;
+    height: 25px;
+    padding: 1px;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+.modalPosition {
+
+    max-height: calc(300% - 100px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+}
+
+.modalPosition2 {
+    
+    max-height: calc(300% - 100px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 500px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+
+.blue-bg {
+    position: fixed;
+    background-size: cover;
+    background-color: #58aff6;
+    top: 0;
+    height: 400px;
+    width: 100vw;
+    z-index: -1;
+}
+
+.white-bg {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    min-height: 0px;
+    margin: 180px 0px;
+    width: 100vw;
+    height: 50vh;
+    -webkit-transform: skewY(10deg);
+    transform: skewY(10deg);
+    z-index: -1;
+    background-color: #eaf0f2;
+    
+}
+.black-bg {
+    position: fixed;
+    top: 2px;
+    background-color: #fff;
+    margin: 0px 0px;
+    width: 150vw;
+    height: 10vh;
+    z-index: -1;
+    background-color: #292c2f;
+}
+
+.shadow {
+    box-shadow: -2px -5px 5px 0px rgba(0, 0, 0, 0.3);
+}

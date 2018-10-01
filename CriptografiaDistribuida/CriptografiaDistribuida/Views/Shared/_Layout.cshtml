@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html  lang="en">
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="footer, links, phone, icons" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Criptografia Distribuída</title>
+
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+    <script type="text/javascript">
+
+        function modalSobre() {
+            swal({
+                title: "Sobre",
+                text: " Trabalho desenvolvido para Disciplina de Computação Distribuída, no curso de Ciência da Computação, no ano 2018 em PUC-MG. Professor: Felipe Domingos.",
+                button: "OK",
+            });
+        }
+
+        function voltarHome() {
+
+            location.reload();
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="blue-bg">
+        <h1 style="padding-left: 750px; font-size:80px; font: bold verdana">CRIPTOGRAFIA DISTRIBUÍDA</h1>
+    </div>
+    <div class="black-bg ">
+        <h1 style="padding-left: 750px; font-size:80px; font: bold verdana; color:lightcyan">CRIPTOGRAFIA DISTRIBUÍDA</h1>
+    </div>
+    <div class="white-bg shadow"></div>
+
+
+    <div class="modal-content container modalPosition" id="ModalPrincipal">
+        <div class="modal-header">
+            <div class="btn-group">
+                <input type="button" name="opcao_c" value="Criar chave" class="btn btn-primary">
+                <input type="button" name="opcao_u" value="Usar Chave" class="btn btn-primary">
+            </div>
+        </div>
+        <div class="modal-body hidden" id="modal_gerarChave">
+            <p>Gerar nova chave única para acesso.</p>
+            <input class="text-info" type="text" id="chave_gerar" value="" style="border-color:black" disabled />
+            <button class="btn btn-danger" id="gera_chave">Gerar chave</button>
+        </div>
+        <div class="modal-body hidden" id="modal_usarChave">
+            <p>Utilizar chave única já EXISTENTE para acesso.</p>
+            <input class="text-success" type="text" id="chave_usar" value="" style="border-color:black" />
+            <button class="btn btn-success" id="usa_chave">Validar Chave</button>
+        </div>
+        <div class="modal-body" id="modal_geral">
+            <p>“Criar Chave”- Gerar uma chave de forma aleatória, para utilizar a mesma na ação de criptografar ou descriptografar uma mensagem.</p>
+            <p>“Usar Chave”- Caso já possua uma chave gerada, para utilizar a mesma na ação de criptografar ou descriptografar uma mensagem especifica dessa chave.</p>
+        </div>
+        <div class="modal-footer hidden" id="continuar_gera">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="ok_gera">Continuar</button>
+        </div>
+        <div class="modal-footer hidden" id="continuar_usa">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="ok_usa">Continuar</button>
+        </div>
+    </div>
+
+
+    <div class="modal-content container modalPosition2 hidden" style="overflow-x:auto;" id="TelaPrincipal">
+        @RenderBody()
+    </div>
+
+    <footer class="footer-distributed" style="opacity:0.9">
+        <div class="footer-right">
+            <a href="https://www.facebook.com/adhonay.jrs"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/junioradhonay/"><i class="fa fa-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=553198277034"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://github.com/adhonayjunior"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="footer-left">
+            <p class="footer-links">
+                <a href="#" onclick="voltarHome();">Home</a>
+                ·
+                <a href="#" onclick="modalSobre();">Sobre</a>
+                @*·*@
+                @*<a href="#" i class="fa fa-phone">  (31) 99827-3034</a>*@
+            </p>
+            <p>&copy; 2018 Copyright: Adhonay Júnior</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+
+</html>
+
+
+
+
